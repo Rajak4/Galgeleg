@@ -9,15 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Hjaelp"></activity>
-        <activity android:name=".Spil" />
-        <activity android:name=".Hovedmenu">
+        <activity android:name=".Hjaelp_akt"></activity>
+        <activity android:name=".Spil_akt" />
+        <activity android:name=".Hovedmenu_akt">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
