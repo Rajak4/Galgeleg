@@ -2,13 +2,13 @@ package com.example.galgeleg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class Hovedmenu_akt extends AppCompatActivity implements View.OnClickListener {
 
-    Galgelogik logik = new Galgelogik();
     Button hjaelpKnap, spilKnap;
 
     @Override
@@ -31,10 +31,13 @@ public class Hovedmenu_akt extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if(v==spilKnap){
-            spilKnap.setText("hej");
+            Intent i = new Intent(this, Spil_akt.class);
+            startActivity(i);
         }
         else if(v==hjaelpKnap){
             hjaelpKnap.setText("hej");
+            Intent i = new Intent(this, Hjaelp_akt.class);
+            startActivity(i);
         }
 
     }
