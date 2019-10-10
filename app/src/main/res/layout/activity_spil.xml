@@ -44,282 +44,283 @@
         app:srcCompat="@drawable/galge" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/knapQ"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="1dp"
         android:text="Q"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintEnd_toStartOf="@+id/knapW"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button20"
+        android:id="@+id/knapA"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="108dp"
+        android:layout_marginEnd="1dp"
         android:text="A"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/knapS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/knapW"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="W"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintEnd_toStartOf="@+id/knapE"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/knapS"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="S"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintEnd_toStartOf="@+id/knapE"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/knapE"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="E"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/knapR"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button22"
+        android:id="@+id/knapD"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="D"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/knapR"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button31"
+        android:id="@+id/knapZ"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
         android:text="Z"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/knapR"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/knapR"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="R"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintEnd_toStartOf="@+id/knapT"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button23"
+        android:id="@+id/knapF"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="F"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintEnd_toStartOf="@+id/knapT"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button32"
+        android:id="@+id/knapX"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
         android:text="X"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintEnd_toStartOf="@+id/knapT"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/knapT"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="T"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintEnd_toStartOf="@+id/knapY"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button24"
+        android:id="@+id/knapC"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
         android:text="C"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintEnd_toStartOf="@+id/knapY"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button33"
+        android:id="@+id/knapG"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="G"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintEnd_toStartOf="@+id/knapY"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/knapY"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="Y"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintEnd_toStartOf="@+id/knapB"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/knapH"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="H"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintEnd_toStartOf="@+id/knapB"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button34"
+        android:id="@+id/knapV"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
         android:text="V"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintEnd_toStartOf="@+id/knapB"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/knapB"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
         android:text="B"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintEnd_toStartOf="@+id/knapI"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button35"
+        android:id="@+id/knapJ"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="J"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintEnd_toStartOf="@+id/knapI"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button26"
+        android:id="@+id/knapU"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="U"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintEnd_toStartOf="@+id/knapI"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/knapI"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="I"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintEnd_toStartOf="@+id/knapO"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button27"
+        android:id="@+id/knapK"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="K"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintEnd_toStartOf="@+id/knapO"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button36"
+        android:id="@+id/knapN"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
         android:text="N"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintEnd_toStartOf="@+id/knapO"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/knapO"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="O"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintEnd_toStartOf="@+id/knapP"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button28"
+        android:id="@+id/knapL"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="L"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintEnd_toStartOf="@+id/knapP"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button37"
+        android:id="@+id/knapM"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
         android:text="M"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintEnd_toStartOf="@+id/knapP"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/knapP"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="P"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button19"
+        app:layout_constraintEnd_toStartOf="@+id/knapÅ"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button29"
+        android:id="@+id/knapÆ"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="Æ"
         android:textSize="17dp"
-        app:layout_constraintEnd_toStartOf="@+id/button19"
+        app:layout_constraintEnd_toStartOf="@+id/knapÅ"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button19"
+        android:id="@+id/knapÅ"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
@@ -330,7 +331,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button30"
+        android:id="@+id/knapØ"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
