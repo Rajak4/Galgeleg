@@ -20,8 +20,11 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_spil);
 
         tastatur = new Button[29];
+
+        //ascii værdi A
         char hej = 65;
 
+        //setOnClickListener laves til hver button i tastaturet
         for(int i = 0; i < tastatur.length - 4; i++){
             String næsteKnap = "knap" + hej;
             hej++;
@@ -30,8 +33,13 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
             tastatur[i].setOnClickListener(this);
 
         }
-
-
+        //Æ, Ø, Å hardcodes
+        tastatur[27] = findViewById(R.id.knapÆ);
+        tastatur[27].setOnClickListener(this);
+        tastatur[28] = findViewById(R.id.knapØ);
+        tastatur[28].setOnClickListener(this);
+        tastatur[29] = findViewById(R.id.knapÅ);
+        tastatur[29].setOnClickListener(this);
 
     }
 
