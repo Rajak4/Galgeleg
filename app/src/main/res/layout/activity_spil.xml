@@ -56,11 +56,34 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
+        android:id="@+id/button20"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="108dp"
+        android:text="A"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
         android:id="@+id/button10"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="W"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="S"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/button11"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -76,11 +99,51 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
+        android:id="@+id/button22"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="D"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:text="Z"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
         android:id="@+id/button12"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="R"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="F"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:text="X"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/button13"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -96,6 +159,26 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
+        android:id="@+id/button24"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:text="C"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="G"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
         android:id="@+id/button14"
         android:layout_width="37dp"
         android:layout_height="0dp"
@@ -106,7 +189,47 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
+        android:id="@+id/button25"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="H"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button34"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:text="V"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
         android:id="@+id/button15"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:text="B"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button35"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="J"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button26"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
@@ -126,11 +249,51 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
+        android:id="@+id/button27"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="K"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button36"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:text="N"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
         android:id="@+id/button17"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:text="O"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button28"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="L"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button37"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:text="M"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/button18"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -146,12 +309,32 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
+        android:id="@+id/button29"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="Æ"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button19"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
         android:id="@+id/button19"
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="2dp"
         android:text="Å"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button30"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:text="Ø"
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
