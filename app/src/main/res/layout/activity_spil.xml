@@ -6,4 +6,154 @@
     android:layout_height="match_parent"
     tools:context=".Spil_akt">
 
+    <TextView
+        android:id="@+id/spilOverskrift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
+        android:text="Galgespil"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="10dp"
+        android:text="____________________________________________"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/galge" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="60dp"
+        android:text="Q"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="W"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="E"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="R"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="T"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="Y"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="U"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="I"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="O"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:text="P"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/button19"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="37dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="2dp"
+        android:text="Å"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
