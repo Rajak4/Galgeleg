@@ -100,6 +100,11 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 else {
                     tastatur[i].setTextColor(Color.parseColor("#08A026"));
                 }
+                if(logik.erSpilletVundet()){
+                    billede.setImageResource(R.drawable.vinder);
+                } else if(logik.erSpilletTabt()){
+                    billede.setImageResource(R.drawable.taber);
+                }
 
             }
         }
