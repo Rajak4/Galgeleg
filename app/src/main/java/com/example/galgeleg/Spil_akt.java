@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 
 public class Spil_akt extends AppCompatActivity implements View.OnClickListener {
@@ -15,6 +16,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
 
     Button[] tastatur;
     EditText felt;
+    ImageView billede;
 
 
     @Override
@@ -23,6 +25,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_spil);
 
         felt = findViewById(R.id.felt);
+        billede = findViewById(R.id.billede);
 
 
         logik.nulstil();
@@ -63,6 +66,34 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 logik.logStatus();
                 //Opdater ord-feltet, når der gættes
                 felt.setText(logik.getSynligtOrd());
+
+                //Opdaterer billedet efter hvor mange forkerte gæt man har
+                if(!logik.erSidsteBogstavKorrekt()){
+
+                    switch (logik.getAntalForkerteBogstaver()){
+
+                        case 1:
+                            billede.setImageResource(R.drawable.forkert1);
+                            break;
+                        case 2:
+                            billede.setImageResource(R.drawable.forkert2);
+                            break;
+                        case 3:
+                            billede.setImageResource(R.drawable.forkert3);
+                            break;
+                        case 4:
+                            billede.setImageResource(R.drawable.forkert4);
+                            break;
+                        case 5:
+                            billede.setImageResource(R.drawable.forkert5);
+                            break;
+                        case 6:
+                            billede.setImageResource(R.drawable.forkert6);
+                            break;
+                    }
+
+                }
+
             }
         }
 

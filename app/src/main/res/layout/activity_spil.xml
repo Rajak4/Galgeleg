@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/billede"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
@@ -54,7 +54,7 @@
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapW"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapA"
@@ -67,7 +67,7 @@
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapS"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapW"
@@ -77,7 +77,7 @@
         android:text="W"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapE"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapS"
@@ -87,7 +87,7 @@
         android:text="S"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapE"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapE"
@@ -97,7 +97,7 @@
         android:text="E"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapR"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapD"
@@ -107,7 +107,7 @@
         android:text="D"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapR"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapZ"
@@ -117,7 +117,7 @@
         android:text="Z"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapR"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapR"
@@ -127,7 +127,7 @@
         android:text="R"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapT"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapF"
@@ -137,7 +137,7 @@
         android:text="F"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapT"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapX"
@@ -147,7 +147,7 @@
         android:text="X"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapT"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapT"
@@ -157,7 +157,7 @@
         android:text="T"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapY"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapC"
@@ -167,7 +167,7 @@
         android:text="C"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapY"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapG"
@@ -177,7 +177,7 @@
         android:text="G"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapY"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapY"
@@ -187,7 +187,7 @@
         android:text="Y"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapB"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapH"
@@ -197,7 +197,7 @@
         android:text="H"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapB"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapV"
@@ -207,7 +207,7 @@
         android:text="V"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapB"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapB"
@@ -217,7 +217,7 @@
         android:text="B"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapI"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapJ"
@@ -227,7 +227,7 @@
         android:text="J"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapI"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapU"
@@ -237,7 +237,7 @@
         android:text="U"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapI"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapI"
@@ -247,7 +247,7 @@
         android:text="I"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapO"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapK"
@@ -257,7 +257,7 @@
         android:text="K"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapO"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapN"
@@ -267,7 +267,7 @@
         android:text="N"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapO"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapO"
@@ -277,7 +277,7 @@
         android:text="O"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapP"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapL"
@@ -287,7 +287,7 @@
         android:text="L"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapP"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapM"
@@ -297,7 +297,7 @@
         android:text="M"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapP"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapP"
@@ -307,7 +307,7 @@
         android:text="P"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapÅ"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapÆ"
@@ -317,7 +317,7 @@
         android:text="Æ"
         android:textSize="17dp"
         app:layout_constraintEnd_toStartOf="@+id/knapÅ"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapÅ"
@@ -328,7 +328,7 @@
         android:text="Å"
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <Button
         android:id="@+id/knapØ"
@@ -338,7 +338,7 @@
         android:text="Ø"
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
     <EditText
         android:id="@+id/felt"
@@ -349,6 +349,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/billede" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
