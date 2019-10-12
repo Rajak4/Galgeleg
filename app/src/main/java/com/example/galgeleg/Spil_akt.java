@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 public class Spil_akt extends AppCompatActivity implements View.OnClickListener {
 
+    //Logik-objekt oprettes, så logik-metoder kan bruges her
     Galgelogik logik = new Galgelogik();
 
     Button[] tastatur;
@@ -28,16 +29,16 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         felt = findViewById(R.id.felt);
         billede = findViewById(R.id.billede);
 
-
-        logik.nulstil();
-
+        //Tastatur-array af Button views oprettes
         tastatur = new Button[29];
 
         //ascii værdi A
         char hej = 65;
 
-        //setOnClickListener laves til hver button i tastaturet
+        //setOnClickListener laves til hver button i tastaturet. -3 pga ÆØÅ
         for(int i = 0; i < tastatur.length - 3; i++){
+
+            //Knappernes id er navngivet knapA, knapB osv...
             String næsteKnap = "knap" + hej;
             hej++;
             int knapId = getResources().getIdentifier(næsteKnap, "id", getPackageName());
@@ -63,8 +64,10 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         for(int i=0; i<tastatur.length; i++){
             if(v == tastatur[i]){
 
+                //Gætter på det bogstav der trykkes på - ændres til lille bogstav pga logik
                 logik.gætBogstav(tastatur[i].getText().toString().toLowerCase());
                 logik.logStatus();
+
                 //Opdater ord-feltet, når der gættes
                 felt.setText(logik.getSynligtOrd());
 
