@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/amiko"
-        android:text="Galgespil"
+        android:text="@string/galgespilOverskrift"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,7 +26,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="10dp"
-        android:text="____________________________________________"
+        android:text="@string/understregningSpil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/galge" />
+        app:srcCompat="@drawable/galge"
+        android:contentDescription="TODO" />
 
     <Button
         android:id="@+id/knapQ"
@@ -50,8 +51,8 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="1dp"
-        android:text="Q"
-        android:textSize="17dp"
+        android:text="@string/qKnap"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapW"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
@@ -63,8 +64,8 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="1dp"
-        android:text="A"
-        android:textSize="17dp"
+        android:text="@string/aKnap"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
@@ -74,8 +75,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="W"
-        android:textSize="17dp"
+        android:text="@string/wKnap"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapE"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -84,8 +85,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="S"
-        android:textSize="17dp"
+        android:text="@string/knapS"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapE"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -94,8 +95,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="E"
-        android:textSize="17dp"
+        android:text="@string/knapE"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapR"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -104,8 +105,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="D"
-        android:textSize="17dp"
+        android:text="@string/knapD"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapR"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -114,8 +115,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
-        android:text="Z"
-        android:textSize="17dp"
+        android:text="@string/knapZ"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapR"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -124,8 +125,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="R"
-        android:textSize="17dp"
+        android:text="@string/knapR"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapT"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -134,8 +135,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="F"
-        android:textSize="17dp"
+        android:text="@string/knapF"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapT"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -144,8 +145,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
-        android:text="X"
-        android:textSize="17dp"
+        android:text="@string/knapX"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapT"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -154,8 +155,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="T"
-        android:textSize="17dp"
+        android:text="@string/knapT"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapY"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -164,8 +165,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
-        android:text="C"
-        android:textSize="17dp"
+        android:text="@string/knapC"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapY"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -174,8 +175,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="G"
-        android:textSize="17dp"
+        android:text="@string/knapG"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapY"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -184,8 +185,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="Y"
-        android:textSize="17dp"
+        android:text="@string/knapY"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapB"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -194,8 +195,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="H"
-        android:textSize="17dp"
+        android:text="@string/knapH"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapB"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -204,8 +205,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
-        android:text="V"
-        android:textSize="17dp"
+        android:text="@string/knapV"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapB"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -214,8 +215,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
-        android:text="B"
-        android:textSize="17dp"
+        android:text="@string/knapB"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapI"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -224,8 +225,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="J"
-        android:textSize="17dp"
+        android:text="@string/knapJ"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapI"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -234,8 +235,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="U"
-        android:textSize="17dp"
+        android:text="@string/knapU"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapI"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -244,8 +245,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="I"
-        android:textSize="17dp"
+        android:text="@string/knapI"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapO"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -255,7 +256,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
         android:text="K"
-        android:textSize="17dp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapO"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -264,8 +265,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
-        android:text="N"
-        android:textSize="17dp"
+        android:text="@string/knapN"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapO"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -274,8 +275,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="O"
-        android:textSize="17dp"
+        android:text="@string/knapO"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapP"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -284,8 +285,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="L"
-        android:textSize="17dp"
+        android:text="@string/knapL"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapP"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -294,8 +295,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="156dp"
-        android:text="M"
-        android:textSize="17dp"
+        android:text="@string/knapM"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapP"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -304,8 +305,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
-        android:text="P"
-        android:textSize="17dp"
+        android:text="@string/knapP"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapÅ"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -314,8 +315,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="Æ"
-        android:textSize="17dp"
+        android:text="@string/knapÆ"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/knapÅ"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -325,8 +326,8 @@
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="2dp"
-        android:text="Å"
-        android:textSize="17dp"
+        android:text="@string/knapÅ"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
@@ -335,8 +336,8 @@
         android:layout_width="37dp"
         android:layout_height="0dp"
         android:layout_marginTop="108dp"
-        android:text="Ø"
-        android:textSize="17dp"
+        android:text="@string/knapØ"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/billede" />
 
