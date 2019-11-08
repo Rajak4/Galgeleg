@@ -35,7 +35,6 @@ public class Hovedmenu_akt extends AppCompatActivity implements View.OnClickList
             startActivity(i);
         }
         else if(v==hjaelpKnap){
-            hjaelpKnap.setText("hej");
             Intent i = new Intent(this, Hjaelp_akt.class);
             startActivity(i);
         }

@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Hjaelp_akt"></activity>
+        <activity android:name=".Taber_akt"></activity>
+        <activity android:name=".Vinder_akt" />
+        <activity android:name=".Hjaelp_akt" />
         <activity android:name=".Spil_akt" />
         <activity android:name=".Hovedmenu_akt">
             <intent-filter>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class Spil_akt extends AppCompatActivity implements View.OnClickListener {
@@ -19,6 +20,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     Button[] tastatur;
     EditText felt;
     ImageView billede;
+    TextView antalForsoeg;
 
 
     @Override
@@ -28,6 +30,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
 
         felt = findViewById(R.id.felt);
         billede = findViewById(R.id.billede);
+        antalForsoeg = findViewById(R.id.antalForsoeg);
 
         //Tastatur-array af Button views oprettes
         tastatur = new Button[29];
@@ -70,6 +73,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
 
                 //Opdater ord-feltet, når der gættes
                 felt.setText(logik.getSynligtOrd());
+                antalForsoeg.setText("Forsøg brugt: " + logik.getBrugteBogstaver().size());
 
                 //Opdaterer billedet efter hvor mange forkerte gæt man har
                 if(!logik.erSidsteBogstavKorrekt()){
@@ -103,10 +107,22 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 else {
                     tastatur[i].setTextColor(Color.parseColor("#08A026"));
                 }
+
+                //Hvis spillet vindes, skifter skærmbillede, og data med antal brugte forsøg sendes med intent
                 if(logik.erSpilletVundet()){
-                    billede.setImageResource(R.drawable.vinder);
+                    Intent vinderIntent = new Intent(this, Vinder_akt.class);
+                    String strToPutTVinder = "Forsøg brugt: " + logik.getBrugteBogstaver().size();
+
+                    vinderIntent.putExtra("VINDER_STRING",strToPutTVinder);
+                    startActivity(vinderIntent);
+
+                    //Hvis spillet tabes, skifter skærmbillede, og det rigtige ord skal vises
                 } else if(logik.erSpilletTabt()){
-                    billede.setImageResource(R.drawable.taber);
+                    Intent taberIntent = new Intent(this,Taber_akt.class);
+                    String strToPutTaber = "Det rigtige ord var: " + logik.getOrdet();
+
+                    taberIntent.putExtra("TABER_STRING", strToPutTaber);
+                    startActivity(taberIntent);
                 }
 
             }
