@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,26 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spil);
+
+        //Baggrundstråd oprettes, hvori ord hentes fra DR
+        new AsyncTask(){
+            @Override
+            protected Object doInBackground(Object[] objects) {
+                try {
+                    logik.hentOrdFraDr();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Object o) {
+
+            }
+        }.execute();
+
+
 
         felt = findViewById(R.id.felt);
         billede = findViewById(R.id.billede);
