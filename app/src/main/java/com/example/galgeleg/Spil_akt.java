@@ -41,6 +41,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
 
     private List<Integer> highscoreList = new ArrayList<>();
 
+    //Gemmer highscore lokalt med PreferenceManager
     public void saveHighscore(List<Integer> liste, String key, Context context){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
@@ -50,6 +51,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         editor.commit();
     }
 
+    //Henter den gemte highscore med PreferenceManager
     public List<Integer> getSavedHighscore(String key, Context context){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         Gson gson = new Gson();
@@ -62,6 +64,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         }
     }
 
+    //Tilføjer score til highscore vha. ovenstående saveHighscore-metode
     public void addScore(int score, String key, Context context){
         List<Integer> tempList = getSavedHighscore(key, context);
         tempList.add(score);
@@ -122,8 +125,6 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         tastatur[27].setOnClickListener(this);
         tastatur[28] = findViewById(R.id.knapÅ);
         tastatur[28].setOnClickListener(this);
-
-
     }
 
     @Override
@@ -141,11 +142,13 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 felt.setText(logik.getSynligtOrd());
                 antalForsoeg.setText("Forsøg brugt: " + logik.getBrugteBogstaver().size());
 
-                //Opdaterer billedet efter hvor mange forkerte gæt man har
+
                 if(!logik.erSidsteBogstavKorrekt()){
 
+                    //Ved forkert gæt farves bogstav rødt
                     tastatur[i].setTextColor(Color.parseColor("#FF0000"));
 
+                    //Opdaterer billedet efter hvor mange forkerte gæt man har
                     switch (logik.getAntalForkerteBogstaver()){
 
                         case 1:
@@ -167,24 +170,25 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                             billede.setImageResource(R.drawable.forkert6);
                             break;
                     }
-
-
                 }
                 else {
+                    //Ved rigtigt gæt farves bogstav grønt
                     tastatur[i].setTextColor(Color.parseColor("#08A026"));
                 }
 
-                //Hvis spillet vindes, skifter skærmbillede, og data med antal brugte forsøg sendes med intent
                 if(logik.erSpilletVundet()){
+
+                    //Hvis spillet vindes, skifter skærmbillede, og data med antal brugte forsøg sendes med intent
                     Intent vinderIntent = new Intent(this, Vinder_akt.class);
                     String strToPutTVinder = "Forsøg brugt: " + logik.getBrugteBogstaver().size();
-
-                    addScore(logik.getBrugteBogstaver().size(),"NØGLE", this);
-                    System.out.println("Listen har elementer: " + highscoreList.size());
                     vinderIntent.putExtra("VINDER_STRING",strToPutTVinder);
+
+                    //Antal brugte forsøg gemmes lokalt i highscore
+                    addScore(logik.getBrugteBogstaver().size(),"NØGLE", this);
+
                     startActivity(vinderIntent);
 
-                    //Hvis spillet tabes, skifter skærmbillede, og det rigtige ord skal vises
+                    //Hvis spillet tabes, skifter skærmbillede, og det rigtige ord vises (ordet sendes med intent)
                 } else if(logik.erSpilletTabt()){
                     Intent taberIntent = new Intent(this,Taber_akt.class);
                     String strToPutTaber = "Det rigtige ord var: " + logik.getOrdet();
@@ -192,12 +196,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                     taberIntent.putExtra("TABER_STRING", strToPutTaber);
                     startActivity(taberIntent);
                 }
-
             }
         }
-
-
     }
-
-
 }

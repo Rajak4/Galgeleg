@@ -16,6 +16,7 @@ public class Hovedmenu_akt extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hovedmenu);
 
+        //Listeners på knapper
         spilKnap = findViewById(R.id.startspil);
         spilKnap.setOnClickListener(this);
 
@@ -25,6 +26,7 @@ public class Hovedmenu_akt extends AppCompatActivity implements View.OnClickList
         highscoreKnap = findViewById(R.id.highscoreKnap);
         highscoreKnap.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
