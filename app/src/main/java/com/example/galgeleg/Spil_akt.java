@@ -2,15 +2,27 @@ package com.example.galgeleg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Spil_akt extends AppCompatActivity implements View.OnClickListener {
@@ -22,6 +34,39 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     EditText felt;
     ImageView billede;
     TextView antalForsoeg;
+
+    public List<Integer> getHighscoreList() {
+        return highscoreList;
+    }
+
+    private List<Integer> highscoreList = new ArrayList<>();
+
+    public void saveHighscore(List<Integer> liste, String key, Context context){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(liste);
+        editor.putString(key,json);
+        editor.commit();
+    }
+
+    public List<Integer> getSavedHighscore(String key, Context context){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        Gson gson = new Gson();
+        String gemt = prefs.getString(key, "HEJ");
+        Type type = new TypeToken<List <Integer>>(){}.getType();
+        if(gemt.equals("HEJ")){
+            return new ArrayList<>();
+        } else {
+           return gson.fromJson(gemt, type);
+        }
+    }
+
+    public void addScore(int score, String key, Context context){
+        List<Integer> tempList = getSavedHighscore(key, context);
+        tempList.add(score);
+        saveHighscore(tempList, key, context);
+    }
 
 
     @Override
@@ -134,6 +179,8 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                     Intent vinderIntent = new Intent(this, Vinder_akt.class);
                     String strToPutTVinder = "Forsøg brugt: " + logik.getBrugteBogstaver().size();
 
+                    addScore(logik.getBrugteBogstaver().size(),"NØGLE", this);
+                    System.out.println("Listen har elementer: " + highscoreList.size());
                     vinderIntent.putExtra("VINDER_STRING",strToPutTVinder);
                     startActivity(vinderIntent);
 

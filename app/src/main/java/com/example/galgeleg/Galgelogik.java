@@ -21,6 +21,7 @@ public class Galgelogik {
   private boolean spilletErTabt;
 
   public Galgelogik() {
+ /*
     muligeOrd.add("bil");
     muligeOrd.add("computer");
     muligeOrd.add("programmering");
@@ -30,7 +31,10 @@ public class Galgelogik {
     muligeOrd.add("skovsnegl");
     muligeOrd.add("solsort");
     muligeOrd.add("nitten");
+
+
     nulstil();
+    */
   }
 
 
@@ -72,6 +76,7 @@ public class Galgelogik {
     antalForkerteBogstaver = 0;
     spilletErVundet = false;
     spilletErTabt = false;
+
     ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
     opdaterSynligtOrd();
   }
