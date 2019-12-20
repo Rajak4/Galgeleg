@@ -19,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -34,6 +36,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     //Logik-objekt oprettes, så logik-metoder kan bruges her
     Galgelogik logik = new Galgelogik();
 
+    TextView spilOverskrift;
     Button[] tastatur;
     EditText felt;
     ImageView billede;
@@ -41,15 +44,19 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     private SoundPool soundPool;
     private int taberLyd;
     private int vinderLyd;
+    private long startTid;
+    private long slutTid;
+    private long tidBrugt;
+    private int livTilbage = 7;
 
-    public List<Integer> getHighscoreList() {
+    public List<Long> getHighscoreList() {
         return highscoreList;
     }
 
-    private List<Integer> highscoreList = new ArrayList<>();
+    private List<Long> highscoreList = new ArrayList<>();
 
     //Gemmer highscore lokalt med PreferenceManager
-    public void saveHighscore(List<Integer> liste, String key, Context context){
+    public void saveHighscore(List<Long> liste, String key, Context context){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
         Gson gson = new Gson();
@@ -59,7 +66,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     }
 
     //Henter den gemte highscore med PreferenceManager
-    public List<Integer> getSavedHighscore(String key, Context context){
+    public List<Long> getSavedHighscore(String key, Context context){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         Gson gson = new Gson();
         String gemt = prefs.getString(key, "HEJ");
@@ -72,8 +79,8 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     }
 
     //Tilføjer score til highscore vha. ovenstående saveHighscore-metode
-    public void addScore(int score, String key, Context context){
-        List<Integer> tempList = getSavedHighscore(key, context);
+    public void addScore(long score, String key, Context context){
+        List<Long> tempList = getSavedHighscore(key, context);
         tempList.add(score);
         saveHighscore(tempList, key, context);
     }
@@ -84,12 +91,22 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spil);
 
+        spilOverskrift = findViewById(R.id.spilOverskrift);
+
+        //Animation
+        YoYo.with(Techniques.FadeInLeft)
+                .duration(2000)
+                .repeat(1)
+                .playOn(spilOverskrift);
+        spilOverskrift.setText("Henter ord fra DR...");
+
         //Baggrundstråd oprettes, hvori ord hentes fra DR
         new AsyncTask(){
             @Override
             protected Object doInBackground(Object[] objects) {
                 try {
                     logik.hentOrdFraDr();
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -98,9 +115,10 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
 
             @Override
             protected void onPostExecute(Object o) {
-
+                spilOverskrift.setText("Gæt løs!");
             }
         }.execute();
+
 
         //Tjekker Android version, da SoundPool skal initialiseres forskelligt alt efter version
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
@@ -122,7 +140,6 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         }
         taberLyd = soundPool.load(this, R.raw.taberlyd, 1);
         vinderLyd = soundPool.load(this, R.raw.vinderlyd, 1);
-
 
 
         felt = findViewById(R.id.felt);
@@ -161,6 +178,9 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         //Tjekker hvad der trykkes på
         for(int i=0; i<tastatur.length; i++){
             if(v == tastatur[i]){
+                if(logik.getBrugteBogstaver().size() == 0){
+                    startTid = System.currentTimeMillis();
+                }
 
                 //Gætter på det bogstav der trykkes på - ændres til lille bogstav pga logik
                 logik.gætBogstav(tastatur[i].getText().toString().toLowerCase());
@@ -168,7 +188,8 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
 
                 //Opdater ord-feltet, når der gættes
                 felt.setText(logik.getSynligtOrd());
-                antalForsoeg.setText("Forsøg brugt: " + logik.getBrugteBogstaver().size());
+                antalForsoeg.setText("Liv tilbage: " + livTilbage);
+                livTilbage --;
 
 
                 if(!logik.erSidsteBogstavKorrekt()){
@@ -205,21 +226,24 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 }
 
                 if(logik.erSpilletVundet()){
+                    slutTid = System.currentTimeMillis();
+                    tidBrugt = (slutTid - startTid) / 1000;
 
                     //Hvis spillet vindes, skifter skærmbillede, og data med antal brugte forsøg sendes med intent
                     Intent vinderIntent = new Intent(this, Vinder_akt.class);
-                    String strToPutTVinder = "Forsøg brugt: " + logik.getBrugteBogstaver().size();
+                    String strToPutTVinder = "Tid brugt: " + tidBrugt + "s";
                     vinderIntent.putExtra("VINDER_STRING",strToPutTVinder);
 
                     soundPool.play(vinderLyd, 1, 1, 0, 0, 1);
 
-                    //Antal brugte forsøg gemmes lokalt i highscore
-                    addScore(logik.getBrugteBogstaver().size(),"NØGLE", this);
+                    //Tid brugt gemmes lokalt i highscore
+                    addScore(tidBrugt,"NØGLE", this);
 
                     startActivity(vinderIntent);
 
                     //Hvis spillet tabes, skifter skærmbillede, og det rigtige ord vises (ordet sendes med intent)
                 } else if(logik.erSpilletTabt()){
+
                     Intent taberIntent = new Intent(this,Taber_akt.class);
                     String strToPutTaber = "Det rigtige ord var: " + logik.getOrdet();
                     soundPool.play(taberLyd, 1, 1, 0, 0, 1);

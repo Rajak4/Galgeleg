@@ -22,7 +22,7 @@ public class Highscore_akt extends AppCompatActivity {
     RecyclerView highscore;
     Galgelogik logik;
     Spil_akt hej = new Spil_akt();
-    List<Integer> highscoreList;
+    List<Long> highscoreList;
 
 
     @Override
@@ -56,7 +56,7 @@ public class Highscore_akt extends AppCompatActivity {
             TextView highscoreData = holder.itemView.findViewById(R.id.highscoreData);
 
             placeringPåListe.setText("" + (position + 1));
-            highscoreData.setText("Antal forsøg: " + highscoreList.get(position));
+            highscoreData.setText("Tid brugt: " + highscoreList.get(position) + "s");
         }
 
         @Override

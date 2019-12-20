@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class Vinder_akt extends AppCompatActivity implements View.OnClickListener {
 
     ImageView billede;
@@ -31,6 +34,13 @@ public class Vinder_akt extends AppCompatActivity implements View.OnClickListene
 
         hovedmenu.setOnClickListener(this);
         spilIgen.setOnClickListener(this);
+
+        YoYo.with(Techniques.RubberBand)
+                .duration(500)
+                .repeat(25)
+                .playOn(billede);
+
+
     }
 
 
