@@ -6,7 +6,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -34,6 +38,9 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
     EditText felt;
     ImageView billede;
     TextView antalForsoeg;
+    private SoundPool soundPool;
+    private int taberLyd;
+    private int vinderLyd;
 
     public List<Integer> getHighscoreList() {
         return highscoreList;
@@ -94,6 +101,27 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
 
             }
         }.execute();
+
+        //Tjekker Android version, da SoundPool skal initialiseres forskelligt alt efter version
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+
+            AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                    .build();
+
+            soundPool = new SoundPool.Builder()
+                    .setMaxStreams(2)
+                    .setAudioAttributes(audioAttributes)
+                    .build();
+
+
+            // Til ældre versioner
+        } else {
+            soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        }
+        taberLyd = soundPool.load(this, R.raw.taberlyd, 1);
+        vinderLyd = soundPool.load(this, R.raw.vinderlyd, 1);
 
 
 
@@ -183,6 +211,8 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                     String strToPutTVinder = "Forsøg brugt: " + logik.getBrugteBogstaver().size();
                     vinderIntent.putExtra("VINDER_STRING",strToPutTVinder);
 
+                    soundPool.play(vinderLyd, 1, 1, 0, 0, 1);
+
                     //Antal brugte forsøg gemmes lokalt i highscore
                     addScore(logik.getBrugteBogstaver().size(),"NØGLE", this);
 
@@ -192,6 +222,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 } else if(logik.erSpilletTabt()){
                     Intent taberIntent = new Intent(this,Taber_akt.class);
                     String strToPutTaber = "Det rigtige ord var: " + logik.getOrdet();
+                    soundPool.play(taberLyd, 1, 1, 0, 0, 1);
 
                     taberIntent.putExtra("TABER_STRING", strToPutTaber);
                     startActivity(taberIntent);

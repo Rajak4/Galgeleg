@@ -3,6 +3,10 @@ package com.example.galgeleg;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Taber_akt extends AppCompatActivity implements View.OnClickListener {
+
 
     ImageView billede;
     TextView taberTekst;
@@ -30,6 +35,8 @@ public class Taber_akt extends AppCompatActivity implements View.OnClickListener
         spilIgen = findViewById(R.id.spilIgenTaber);
         hovedmenu.setOnClickListener(this);
         spilIgen.setOnClickListener(this);
+
+
     }
 
     @Override
