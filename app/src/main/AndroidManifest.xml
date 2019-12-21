@@ -11,12 +11,18 @@
         android:roundIcon="@mipmap/ic_mynewicon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Highscore_akt"></activity>
-        <activity android:name=".Taber_akt" />
-        <activity android:name=".Vinder_akt" />
-        <activity android:name=".Hjaelp_akt" />
-        <activity android:name=".Spil_akt" />
-        <activity android:name=".Hovedmenu_akt">
+        <activity android:name=".Highscore_akt"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Taber_akt"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Vinder_akt"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Hjaelp_akt"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Spil_akt"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Hovedmenu_akt"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

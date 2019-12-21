@@ -96,7 +96,7 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
         //Animation
         YoYo.with(Techniques.FadeInLeft)
                 .duration(2000)
-                .repeat(1)
+                .repeat(2)
                 .playOn(spilOverskrift);
         spilOverskrift.setText("Henter ord fra DR...");
 
@@ -116,6 +116,8 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
             @Override
             protected void onPostExecute(Object o) {
                 spilOverskrift.setText("Gæt løs!");
+                //Opdater ord-feltet, når der gættes
+                felt.setText(logik.getSynligtOrd());
             }
         }.execute();
 
@@ -181,13 +183,13 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 if(logik.getBrugteBogstaver().size() == 0){
                     startTid = System.currentTimeMillis();
                 }
-
+                //Opdater ord-feltet, når der gættes
+                felt.setText(logik.getSynligtOrd());
                 //Gætter på det bogstav der trykkes på - ændres til lille bogstav pga logik
                 logik.gætBogstav(tastatur[i].getText().toString().toLowerCase());
                 logik.logStatus();
 
-                //Opdater ord-feltet, når der gættes
-                felt.setText(logik.getSynligtOrd());
+
                 antalForsoeg.setText("Liv tilbage: " + livTilbage);
                 livTilbage --;
 
