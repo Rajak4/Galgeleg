@@ -118,6 +118,10 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 spilOverskrift.setText("Gæt løs!");
                 //Opdater ord-feltet, når der gættes
                 felt.setText(logik.getSynligtOrd());
+
+                for(Button button : tastatur){
+                    button.setClickable(true);
+                }
             }
         }.execute();
 
@@ -163,15 +167,19 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
             int knapId = getResources().getIdentifier(næsteKnap, "id", getPackageName());
             tastatur[i] = findViewById(knapId);
             tastatur[i].setOnClickListener(this);
+            tastatur[i].setClickable(false);
 
         }
         //Æ, Ø, Å hardcodes
         tastatur[26] = findViewById(R.id.knapÆ);
         tastatur[26].setOnClickListener(this);
+        tastatur[26].setClickable(false);
         tastatur[27] = findViewById(R.id.knapØ);
         tastatur[27].setOnClickListener(this);
+        tastatur[27].setClickable(false);
         tastatur[28] = findViewById(R.id.knapÅ);
         tastatur[28].setOnClickListener(this);
+        tastatur[28].setClickable(false);
     }
 
     @Override
@@ -183,18 +191,18 @@ public class Spil_akt extends AppCompatActivity implements View.OnClickListener 
                 if(logik.getBrugteBogstaver().size() == 0){
                     startTid = System.currentTimeMillis();
                 }
-                //Opdater ord-feltet, når der gættes
-                felt.setText(logik.getSynligtOrd());
+
                 //Gætter på det bogstav der trykkes på - ændres til lille bogstav pga logik
                 logik.gætBogstav(tastatur[i].getText().toString().toLowerCase());
                 logik.logStatus();
 
-
-                antalForsoeg.setText("Liv tilbage: " + livTilbage);
-                livTilbage --;
+                //Opdater ord-feltet, når der gættes
+                felt.setText(logik.getSynligtOrd());
 
 
                 if(!logik.erSidsteBogstavKorrekt()){
+                    livTilbage --;
+                    antalForsoeg.setText("Liv tilbage: " + livTilbage);
 
                     //Ved forkert gæt farves bogstav rødt
                     tastatur[i].setTextColor(Color.parseColor("#FF0000"));
